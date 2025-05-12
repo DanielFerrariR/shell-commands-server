@@ -5,23 +5,23 @@ const app = express();
 
 app.use(express.json());
 
-app.post("/shortcuts/run", (req: Request, res: Response) => {
-  const { shortcutName, apiKey } = req.body ?? {};
+app.post("/shell-command/run", (req: Request, res: Response) => {
+  const { shellCommand, apiKey } = req.body ?? {};
 
   if (apiKey !== process.env.API_KEY) {
     res.status(403).send({ error: "Invalid API key." });
     return;
   }
 
-  if (!shortcutName) {
+  if (!shellCommand) {
     res
       .status(400)
-      .send({ error: 'Missing "shortcutName" in the request body.' });
+      .send({ error: 'Missing "shellCommand" in the request body.' });
     return;
   }
 
-  execSync(`shortcuts run "${shortcutName}"`);
-  res.status(200).send("Shortcut executed successfully.");
+  execSync(shellCommand);
+  res.status(200).send("Command executed successfully.");
 });
 
 const port = process.env.PORT;

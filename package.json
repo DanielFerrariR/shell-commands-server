@@ -1,10 +1,11 @@
 {
-  "name": "apple-shortcuts-server",
+  "name": "shell-commands-server",
   "version": "1.0.0",
-  "description": "Node server for running Apple Shortcuts",
+  "description": "Node server for running Shell commands",
   "main": "server.js",
   "scripts": {
-    "start": "ts-node server.ts"
+    "preinstall": "npm install pm2 bun -g",
+    "start": "pm2 start src/server.ts"
   },
   "author": "",
   "license": "ISC",
