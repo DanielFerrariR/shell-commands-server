@@ -7,5 +7,6 @@ Small aplication to run shell commands on Node.
 1 - Install Node 20.10.0
 2 - npm run install
 3 - npm run start
+4 - Copy and paste startup script and run it
 
 Check [pm2](https://github.com/Unitech/pm2) for more options
