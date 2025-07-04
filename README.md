@@ -12,7 +12,7 @@ Small aplication to run shell commands on Node. It was created with the idea to 
 
 4 - npm run start
 
-5 - From another device in the same network, send a POST request to /shell-command/run with a payload like:
+5 - From another device in the same network, send a POST request to http://localhost:3000/shell-command/run with a payload like:
 
 { shellCommand: 'your shell command', apiKey: 'your_key' }
 
