@@ -1,6 +1,6 @@
 # shell-commands-server
 
-Small aplication to run shell commands on Node. It was created with the idea to send shell commands like 'shortcuts run ...' in a MAC device to execute apple shortcuts, but can do much more than that.
+Node server to send shell commands to the running device. Created as a free alternative to Pushcut for macOS.
 
 ## Steps
 
@@ -9,7 +9,6 @@ Small aplication to run shell commands on Node. It was created with the idea to 
 2 - Install Node 20.10.0
 
 3 - npm install
-
 4 - npm run start
 
 5 - From another device in the same network, send a POST request to http://localhost:3000/shell-command/run with a payload like:
