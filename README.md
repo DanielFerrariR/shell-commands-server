@@ -9,6 +9,7 @@ Node server to send shell commands to the running device. Created as a free alte
 2 - Install Node 20.10.0
 
 3 - npm install
+
 4 - npm run start
 
 5 - From another device in the same network, send a POST request to http://localhost:3000/shell-command/run with a payload like:
